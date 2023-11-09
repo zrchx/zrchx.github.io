@@ -5,6 +5,14 @@
 	--background_alt: #252B2E;
 	--accent: #89B7B0;
 	--foreground: #BCC4C9;
-	--grid_columns: 3;
-	--grid_rows: 2;
 }
+
+title {
+  font: "Iosevka", monospace;
+  background: #383838;
+}
+p {
+  foreground: #BCC4C9;
+  background: #383838;
+}
+
