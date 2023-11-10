@@ -11,7 +11,9 @@
   --violet: #C49EC4;
   --accent: var(--blue);
 }
-
+* {
+	font-family: var(--font);
+}
 body {
   display: flex;
   margin: auto;
@@ -23,7 +25,7 @@ body {
 h1 {
   text-align: center;
   margin-top: auto;
-  font-size: 2em;
+  font-size: 3em;
   color: var(--foreground);
 }
 p {
@@ -39,10 +41,21 @@ h2 {
   color: var(--foreground);
 }
 a {
+  display: flex;
+  align-items: center;
   text-align: center;
-  margin-bottom: auto;
-  font-size: 2em;
+  margin: auto;
+  padding: auto;
+  font-size: 1.4em;
   color: var(--accent);
   background: var(--background_alt);
   text-decoration: none;
+  width: 240px;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+	grid-template-rows: repeat(1, minmax(100px, 1fr));
+}
+a:hover {
+  background-color: var(--accent);
+  color: var(--background);
 }

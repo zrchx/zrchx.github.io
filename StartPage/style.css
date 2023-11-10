@@ -15,37 +15,48 @@
 }
 * {
 	font-family: var(--font);
-	box-sizing: border-box;
 }
 body {
   display: flex;
   margin: auto;
 	align-items: center;
-	position: relative;
   justify-content: center;
-  padding: auto;
   background-color: var(--background);
   height: 100vh;
 }
-main {
-	width: 400px;
-	gap: 14px;
+h1 {
+  text-align: center;
+  margin-top: auto;
+  font-size: 3em;
+  color: var(--foreground);
+}
+p {
+  text-align: center;
   margin: auto;
-	display: grid;
-	grid-template-columns: repeat(var(--grid_columns), minmax(200px, 1fr));
-	grid-template-rows: repeat(var(--grid_rows), minmax(100px, 1fr));
+  color: var(--foreground);
+  background: var(--background);
 }
-main > a {
-	display: flex;
+h2 {
+  text-align: center;
+  margin-bottom: auto;
+  font-size: 2em;
+  color: var(--foreground);
+}
+a {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-	justify-content: center;
-	padding: auto;
-	text-decoration: none;
-	font-size: 2em;
-	background-color: var(--background_alt);
-	color: var(--foreground);
+  text-decoration: none;
+  margin: 14px;
+  width: 180px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.4em;
+  background-color: var(--background_alt);
+  color: var(--accent);
 }
-main > a:hover {
-	background-color: var(--accent);
-	color: var(--background);
+a:hover {
+  background-color: var(--accent);
+  color: var(--background);
 }
