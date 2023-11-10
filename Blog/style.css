@@ -10,21 +10,23 @@
   --orange: #CEB188;
   --violet: #C49EC4;
   --accent: var(--blue);
+  --grid-columns: 1
+  --grid_rows: 1
 }
 * {
 	font-family: var(--font);
 }
 body {
-  display: flex;
+  display: grid;
   margin: auto;
-  flex-direction: column;
   justify-content: center;
   background-color: var(--background);
   height: 100vh;
 }
-h1 {
+a {
   text-align: center;
   margin-top: auto;
+  text-decoration: none;
   font-size: 3em;
   color: var(--foreground);
 }
@@ -40,22 +42,27 @@ h2 {
   font-size: 2em;
   color: var(--foreground);
 }
-a {
-  display: flex;
-  align-items: center;
-  text-align: center;
+main {
+	display: grid;
+  justify-content: center;
   margin: auto;
-  padding: auto;
-  font-size: 1.4em;
-  color: var(--accent);
-  background: var(--background_alt);
-  text-decoration: none;
-  width: 240px;
-  gap: 14px;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
-	grid-template-rows: repeat(1, minmax(100px, 1fr));
+	width: 200px;
+	gap: 5%;
+	grid-template-columns: repeat(var(--grid_columns), minmax(220px, 1fr));
+	grid-template-rows: repeat(var(--grid_rows), minmax(120px, 1fr));
 }
-a:hover {
-  background-color: var(--accent);
-  color: var(--background);
+main > a {
+  display: flex;
+  text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+  padding: 20px;
+	font-size: 1.4em;
+	background-color: var(--background_alt);
+	color: var(--foreground);
+}
+main > a:hover {
+	background-color: var(--accent);
+	color: var(--background);
 }

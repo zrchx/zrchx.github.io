@@ -17,46 +17,40 @@
 	font-family: var(--font);
 }
 body {
-  display: flex;
+  display: grid;
   margin: auto;
-	align-items: center;
-  justify-content: center;
   background-color: var(--background);
   height: 100vh;
 }
-h1 {
-  text-align: center;
-  margin-top: auto;
-  font-size: 3em;
-  color: var(--foreground);
-}
-p {
-  text-align: center;
-  margin: auto;
-  color: var(--foreground);
-  background: var(--background);
-}
-h2 {
+a {
   text-align: center;
   margin-bottom: auto;
+  text-decoration: none;
   font-size: 2em;
   color: var(--foreground);
 }
-a {
-  display: inline-block;
-  text-align: center;
+main {
+	display: grid;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  margin: 14px;
-  width: 180px;
-  height: 100px;
-  line-height: 100px;
-  font-size: 1.4em;
-  background-color: var(--background_alt);
-  color: var(--accent);
+  margin: auto;
+	width: 220px;
+	gap: 5%;
+	grid-template-columns: repeat(var(--grid_columns), minmax(220px, 1fr));
+	grid-template-rows: repeat(var(--grid_rows), minmax(110px, 1fr));
 }
-a:hover {
-  background-color: var(--accent);
-  color: var(--background);
+main > a {
+  display: flex;
+  text-align: center;
+	justify-content: center;
+	align-items: center;
+  padding: auto;
+	text-decoration: none;
+  padding: 40px;
+	font-size: 1.4em;
+	background-color: var(--background_alt);
+	color: var(--foreground);
+}
+main > a:hover {
+	background-color: var(--accent);
+	color: var(--background);
 }

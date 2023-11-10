@@ -10,16 +10,15 @@
   --orange: #CEB188;
   --violet: #C49EC4;
   --accent: var(--blue);
-  --grid_columns: 3;
-  --grid_rows: 2;
+  --grid_columns: 2;
+  --grid_rows: 1;
 }
 * {
 	font-family: var(--font);
 }
 body {
-  display: flex;
+  display: grid;
   margin: auto;
-  flex-direction: column;
   justify-content: center;
   background-color: var(--background);
   height: 100vh;
@@ -42,22 +41,26 @@ h2 {
   font-size: 2em;
   color: var(--foreground);
 }
+main {
+	display: grid;
+  justify-content: center;
+  margin: auto;
+	width: 140px;
+	gap: 5%;
+	grid-template-columns: repeat(var(--grid_columns), minmax(180px, 1fr));
+	grid-template-rows: repeat(var(--grid_rows), minmax(80px, 1fr));
+}
 a {
   display: flex;
-  align-items: center;
-  text-align: center;
-  margin: auto;
+	justify-content: center;
+	align-items: center;
   padding: auto;
-  font-size: 1.4em;
-  color: var(--accent);
-  background: var(--background_alt);
-  text-decoration: none;
-  width: 240px;
-  gap: 14px;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
-	grid-template-rows: repeat(1, minmax(100px, 1fr));
+	text-decoration: none;
+	font-size: 1.4em;
+	background-color: var(--background_alt);
+	color: var(--foreground);
 }
 a:hover {
-  background-color: var(--accent);
-  color: var(--background);
+	background-color: var(--accent);
+	color: var(--background);
 }
