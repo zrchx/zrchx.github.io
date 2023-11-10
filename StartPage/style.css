@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Iosevka:wght@400;500&display=swap');
 :root {
 	--font: "Iosevka", monospace;
-	--background: #1A2023;
-	--background_alt: #252B2E;
-	--accent: #89B7B0;
+	--background: #191919;
+	--background_alt: #292929;
 	--foreground: #BCC4C9;
+  --red: #D18F8F;
+  --green: #BEE1AD;
+  --blue: #A5B4CB;
+  --orange: #CEB188;
+  --violet: #C49EC4;
+  --accent: var(--blue);
 	--grid_columns: 3;
 	--grid_rows: 2;
 }
@@ -13,31 +18,32 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: var(--background);
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
+  display: flex;
+  margin: auto;
 	align-items: center;
 	position: relative;
+  justify-content: center;
+  padding: auto;
+  background-color: var(--background);
+  height: 100vh;
 }
 main {
-	width: 800px;
-	gap: 10px;
+	width: 400px;
+	gap: 14px;
+  margin: auto;
 	display: grid;
 	grid-template-columns: repeat(var(--grid_columns), minmax(200px, 1fr));
 	grid-template-rows: repeat(var(--grid_rows), minmax(100px, 1fr));
 }
 main > a {
+	display: flex;
+  align-items: center;
+	justify-content: center;
+	padding: auto;
 	text-decoration: none;
-	font-size: 35px;
-	padding: 20% 0;
+	font-size: 2em;
 	background-color: var(--background_alt);
 	color: var(--foreground);
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 main > a:hover {
 	background-color: var(--accent);
